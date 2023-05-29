@@ -1,0 +1,51 @@
+.container {
+	margin: 20px auto;
+	max-width: 600px;
+	text-align: center;
+}
+h1 {
+	margin-top: 0;
+}
+input[type="number"] {
+	padding: 5px;
+	margin: 10px 5px;
+	width: 200px;
+    text-align: center;
+}
+button {
+	padding: 5px 15px;
+	margin: 10px;
+	background-color: #137ea2;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+button:hover {
+	background-color: #54bbdd;
+}
+#output {
+	margin-top: 20px;
+	text-align: left;
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+
+#extra {
+    margin-top: 40px;
+	text-align: center;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+#totalHip, #totalHop, #totalInt{
+    margin-top: 10px;
+	text-align: center;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}

@@ -1,0 +1,13 @@
+body {
+    background-color:ivory;
+  }
+
+h2 {
+    color:brown;
+  }
+
+p {
+    color:black;
+    padding: 5px;
+    margin: 30px;
+  }

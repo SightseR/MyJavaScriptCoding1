@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student Database</title>
+	<link rel="stylesheet" href="task13.css">
+</head>
+<body>
+	<h1>Student List</h1>
+
+	<button type="button" id="list-all">List all</button>
+
+	<table id="students">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Info</th>
+				<th>Points</th>
+			</tr>
+		</thead>
+		<tbody>
+
+		</tbody>
+	</table>
+
+	<h2>Add a new student</h2>
+
+	<form>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+
+		<label for="info">Info:</label>
+		<input type="text" id="info" name="info">
+
+		<label for="points">Points:</label>
+		<input type="number" id="points" name="points" required>
+
+		<button type="button" class="add">Add</button>
+	</form>
+
+	<script src="task13.js"></script>
+</body>
+</html>

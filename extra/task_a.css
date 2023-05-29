@@ -1,0 +1,55 @@
+h1, h2, h3 {
+    display: block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-wrapper {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
+    gap: 1px;
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+}
+
+.grid .creature {
+    background-color: #f00;
+}
+
+.grid .target {
+    background-color: #0f0;
+}
+
+.message {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.grid .obstacle {
+    background-color: #666;
+  }

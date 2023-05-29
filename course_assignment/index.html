@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather Dashboard</title>
+    <style>
+        .view {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weather Dashboard</h1>
+    <nav>
+        <button id="view-1-btn">Latest 30 Measurements</button>
+        <button id="view-2-btn">Temperature Measurements</button>
+        <button id="view-3-btn">Wind Speed Measurements</button>
+        <button id="view-5-btn">Custom View</button>
+        <button id="view-4-btn">Info</button>
+        <select id="color-select">
+          <option value="none">Select Background color</option>
+          <option value="Azure">Azure</option>
+          <option value="Beige">Beige</option>
+          <option value="Bisque">Bisque</option>
+          <option value="Lavender">Lavender</option>
+          <option value="LightBlue">Light Blue</option>
+          <option value="LightCyan">Light Cyan</option>
+          <option value="LightGray">Light Gray</option>
+          <option value="LightSalmon">Light Salmon</option>
+          <option value="LightYellow">Light Yellow</option>
+          <option value="PeachPuff">Peach</option>
+          <option value="Pink">Pink</option>
+          <option value="White">White</option>
+        </select>
+    </nav>
+
+    <section class="view" id="view-1">
+        <h2>Latest 30 Measurements</h2>
+        <table id="view-1-table" border="1">
+            <tr>
+              <th>Row</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Type</th>
+              <th>Value</th>
+            </tr>
+          </table>
+
+    </section>
+
+    <section class="view" id="view-2">
+        <h2>Temperature Measurements</h2>
+        <table id="view-2-table" border="1">
+            <select id="view-2-interval">
+                <option value="now">Now (Latest 20 Measurements)</option>
+                <option value="24">24 hours (Latest)</option>
+                <option value="48">48 hours (Latest)</option>
+                <option value="72">72 hours (Latest)</option>
+                <option value="168">1 week (Latest)</option>
+              </select>
+            <tr>
+                <th>Row</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Temperature</th>
+            </tr>
+        </table>
+        <canvas id="view-2-chart"></canvas>
+    </section>
+
+    <section class="view" id="view-3">
+        <h2>Wind Speed Measurements</h2>
+        <table id="view-3-table" border="1">
+            <select id="view-3-interval">
+                <option value="now">Now (Latest 20 Measurements)</option>
+                <option value="24">24 hours (Latest)</option>
+                <option value="48">48 hours (Latest)</option>
+                <option value="72">72 hours (Latest)</option>
+                <option value="168">1 week (Latest)</option>
+              </select>
+            <tr>
+                <th>Row</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Wind Speed</th>
+            </tr>
+        </table>
+        <canvas id="view-3-chart"></canvas>
+    </section>
+    <section class="view" id="view-4">
+        <h2>The weather Dashboard is....</h2>
+        <p>
+          There are a few minor grammar mistakes in the original text. Here's a corrected version:
+
+          <br><br>This website is designed to dynamically fetch and display weather data in a user-friendly manner. Users can view the latest weather measurements fetched from a backend API, presented in a table format with information such as measurement time, type, and value. The tables are ordered from oldest to newest measurement.
+
+          <br><br>Users gain access to additional functionality, such as separate columns for date and time information, descriptive column headers, and bar chart visualizations of the data. They can also switch between different views, such as a default view displaying the latest 30 measurements, a view displaying the latest 20 temperature measurements, and a view displaying the latest 20 wind speed measurements.
+
+          <br><br>Advanced features include drop-down menus that allow users to select a time interval for consideration, with corresponding data shown in the tables and visualizations. Users can also select a desired measurement type for viewing in a table and line chart with time increasing towards the right edge.
+
+          <br><br>The website is designed to be visually appealing, with efficient use of screen space and an optional background color selection. Additionally, the Info view contains author information and a short description of the website's functionality.
+
+          <br><br>Overall, this website provides an easy-to-use interface for accessing and understanding weather data, with increasing levels of functionality.
+
+          <br><br><b><i>Extra Feature:
+          </b>
+          <br>I implemented a selector option with main buttons, which allows the user to change the background color. The selector includes a list of twelve light colors. Since the main theme of the web page is green, only light background colors were chosen to maintain the theme. This helps to keep the main theme consistent while still allowing the user to customize the background to their preference.
+          </i>
+          <br><br><br><b>Author: Kasun Akalanka Kappettiyagoda Vithanage
+          <br>Email: kasun.kappettiyagodavithanage@tuni.fi
+          </b>
+          <br>All rights reserved.
+          <br>23.04.2022
+        </p>
+    </section>
+    <section class="view" id="view-5">
+        <h2>Custom View</h2>
+        <select id="view-5-interval">
+          <option value="s-i">Select Interval</option>
+          <option value="now">Now (Latest 20 Measurements)</option>
+          <option value="24">24 hours (Latest)</option>
+          <option value="48">48 hours (Latest)</option>
+          <option value="72">72 hours (Latest)</option>
+          <option value="168">1 week (Latest)</option>
+        </select>
+        <select id="view-5-measurement">
+          <option value="s-m">Select Measurement Type</option>
+          <option value="temperature">Temperature</option>
+          <option value="wind_speed">Wind Speed</option>
+          <option value="wind_direction">Wind Direction</option>
+          <option value="light">Light</option>
+          <option value="rain">Rain</option>
+        </select>
+        <table id="view-5-table" border="1">
+          <tr>
+            <th>Row Number</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Measurement</th>
+          </tr>
+        </table>
+        <canvas id="view-5-chart" width="800" height="400"></canvas>
+      </section>
+    <script src="script.js"></script>
+</body>
+</html>

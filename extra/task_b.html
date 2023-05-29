@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="task_b.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <div class="form-group">
+        <label for="mass">Mass (kg)</label>
+        <input type="number" id="mass" />
+      </div>
+      <div class="form-group">
+        <label for="height">Height (cm)</label>
+        <input type="number" id="height" />
+      </div>
+      <div class="form-group">
+        <button id="calculate-btn">Calculate BMI</button>
+      </div>
+      <div class="result-container">
+        <div id="result"></div>
+        <div id="error-message"></div>
+      </div>
+      <div class="progress-container">
+        <div id="progress-bar"></div>
+        <div id="indicator"></div>
+      </div>
+    </div>
+    <script src="task_b.js"></script>
+    <p>BMI ranges:<br>
+        For most adults, an ideal BMI is in the 18.5 to 24.9 range.<br>
+        For children and young people aged 2 to 18, the BMI calculation takes into account age and gender as well as height and weight.<br>
+        <br>
+        If your BMI is:<br>
+        below 18.5 – you're in the underweight range<br>
+        between 18.5 and 24.9 – you're in the healthy weight range<br>
+        between 25 and 29.9 – you're in the overweight range<br>
+        30 or over – you're in the obese range</p>
+  </body>
+</html>
